@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Signal</title>
+  <style type="text/css">
+a:link{text-decoration:none;color:black;}
+a:visited{text-decoration:none;color:gray;}
+a:hover{text-decoration:underline;color:blue;}
+  </style>
+  <meta name="keywords"
+ content="Fourier, filtres lin&eacute;aires, Traitement Numérique du Signal, transmission du signal">
+</head>
+
+<body>
+<div style="color: rgb(177, 0, 67); line-height: 12px;">
+<table
+ style="color: white; background-color: rgb(177, 0, 67); width: 100%; line-height: 1px;"
+ border="1">
+  <tbody>
+    <tr>
+      <td style="text-align: center;">
+      <h1>Nombres complexes et Fourier</h1>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>Nombres complexes</small></h2>
+<small>
+<a
+ href="https://www.youtube.com/watch?v=2GwSUDm_Rg8"
+ title="https://www.youtube.com/watch?v=2GwSUDm_Rg8">Les nombres complexes (parie 1)</a>
+<br>
+<a
+ href="https://www.youtube.com/watch?v=T647CGsuOVU"
+ title="https://www.youtube.com/watch?v=T647CGsuOVU">Imaginary numbers are real (part 1)</a>
+<br>
+<a
+ href="https://www.youtube.com/watch?v=F_0yfvm0UoU"
+ title="https://www.youtube.com/watch?v=F_0yfvm0UoU">Understanding e to pi i</a>
+<br>
+<a
+ href="https://www.youtube.com/watch?v=-dhHrg-KbJ0"
+ title="https://www.youtube.com/watch?v=-dhHrg-KbJ0">e to pi i for the dummies</a>
+<br>
+<a
+ href="https://www.youtube.com/watch?v=bIY6ahHVgqA"
+ title="https://www.youtube.com/watch?v=bIY6ahHVgqA">Imaginary numbers and functions of complex variables</a>
+</small>
+
+<h2 style="position: relative; top: 0px; height: 0px;"><small>D&eacute;composition
+en
+s&eacute;rie de Fourier et TF</small></h2>
+<small><a
+ href="https://www.youtube.com/watch?v=r18Gi8lSkfM"
+ title="https://www.youtube.com/watch?v=r18Gi8lSkfM">Fourier Series and Fourier Transform</a>
+<br>
+<a
+ href="https://www.youtube.com/watch?v=cn8nhH5_-EM"
+ title="https://www.youtube.com/watch?v=cn8nhH5_-EM">Fourier, Laplace et compagnie I</a>
+<br>
+<a
+ href="https://www.youtube.com/watch?v=_kXWbso0LJI"
+ title="https://www.youtube.com/watch?v=_kXWbso0LJI">Fourier, Laplace et compagnie II</a>
+<br>
+<a
+ href="https://www.youtube.com/watch?v=4XCSoFLFLNE"
+ title="https://www.youtube.com/watch?v=4XCSoFLFLNE">La TF et ses applications en physique</a>
+<br>
+<a
+ href="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Fourier/fourier1.html"
+ title="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Fourier/fourier1.html">http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Fourier/fourier1.html</a>
+<br>
+<a
+ href="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Fourier/Fourier.html"
+ title="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Fourier/Fourier.html">http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Fourier/Fourier.html</a>
+<br>
+<a
+ href="http://pagesperso-orange.fr/fabrice.sincere/application_builder5/education.htm#harmoniques"
+ title="http://pagesperso-orange.fr/fabrice.sincere/application_builder5/education.htm#harmoniques">http://pagesperso-orange.fr/fabrice.sincere/application_builder5/education.htm#harmoniques</a>
+<br>
+<br>
+</small>
+
+<body>
+<div style="color: rgb(177, 0, 67); line-height: 12px;">
+<table
+ style="color: white; background-color: rgb(177, 0, 67); width: 100%; line-height: 1px;"
+ border="1">
+  <tbody>
+    <tr>
+      <td style="text-align: center;">
+      <h1>Filtres lin&eacute;aires</h1>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>Filtrage</small></h2>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>principe</small></li>
+</ul>
+<small><a
+ href="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Filtres/filtre.html"
+ title="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Filtres/filtre.html">http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Filtres/filtre.html</a>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>lin&eacute;aire
+1<span style="line-height: 10px;">er</span>
+ordre
+(R, L ou C)</small></li>
+</ul>
+<small><a
+ href="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/transfert1RLC.html"
+ title="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/transfert1RLC.html">http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/transfert1RLC.html</a>
+<br>
+<a
+ href="http://www.univ-lemans.fr/enseignements/physique/02/electro/derive.html"
+ title="http://www.univ-lemans.fr/enseignements/physique/02/electro/derive.html">http://www.univ-lemans.fr/enseignements/physique/02/electro/derive.html</a>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>lin&eacute;aire
+2<span style="line-height: 10px;">nd</span>
+ordre (R, L et/ou C, ALI)</small></li>
+</ul>
+<small><a
+ href="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/RLC1.html"
+ title="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/RLC1.html">http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/RLC1.html</a>
+<br>
+<a
+ href="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/transfert2RLC.html"
+ title="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/transfert2RLC.html">http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Alternatif/transfert2RLC.html</a>
+<br>
+<a
+ href="http://www.univ-lemans.fr/enseignements/physique/02/electro/bouchon.html"
+ title="http://www.univ-lemans.fr/enseignements/physique/02/electro/bouchon.html">http://www.univ-lemans.fr/enseignements/physique/02/electro/bouchon.html</a>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>synth&egrave;se</small></li>
+</ul>
+<small><a
+ href="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Filtres/Index_Filtres.html"
+ title="http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Filtres/Index_Filtres.html">http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Filtres/Index_Filtres.html</a>
+<br>
+<a
+ href="http://www.ac-nancy-metz.fr/pres-etab/vuillaume/Present/sitephysapp/qcm/qcm_filtres_img_pa_meme_taille.htm"
+ title="http://www.ac-nancy-metz.fr/pres-etab/vuillaume/Present/sitephysapp/qcm/qcm_filtres_img_pa_meme_taille.htm">http://www.ac-nancy-metz.fr/pres-etab/vuillaume/Present/sitephysapp/qcm/qcm_filtres_img_pa_meme_taille.htm</a><br>
+<br>
+</small>
+
+<table
+ style="color: white; background-color: rgb(177, 0, 67); width: 100%; line-height: 1px;"
+ border="1">
+  <tbody>
+    <tr>
+      <td style="text-align: center;">
+      <h1>Traitement Num&eacute;rique du Signal</h1>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>A venir ...</small></h2>
+<br>
+
+<table
+ style="color: white; background-color: rgb(177, 0, 67); width: 100%; line-height: 1px;"
+ border="1">
+  <tbody>
+    <tr>
+      <td style="text-align: center;">
+      <h1>Transmission de signal</h1>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>Propagation
+des ondes &eacute;lectromagn&eacute;tiques</small></h2>
+<small><a
+ title="http://sitelec.org/applets_walter_fendt/emwave_f/emwave_f.htm"
+ href="http://sitelec.org/applets_walter_fendt/emwave_f/emwave_f.htm">http://sitelec.org/applets_walter_fendt/emwave_f/emwave_f.htm</a><br>
+</small>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>Multiplexage
+temporel et fr&eacute;quentiel</small></h2>
+<small><a
+ title="http://www.httr.ups-tlse.fr/pedagogie/cours/trans/equipements/equipements.htm#S1"
+ href="http://www.httr.ups-tlse.fr/pedagogie/cours/trans/equipements/equipements.htm#S1">http://www.httr.ups-tlse.fr/pedagogie/cours/trans/equipements/equipements.htm#S1</a><br>
+<a title="http://www.technologuepro.com/transmission/chapitre6.htm"
+ href="http://www.technologuepro.com/transmission/chapitre6.htm">http://www.technologuepro.com/transmission/chapitre6.htm</a>
+<br>
+<a
+ href="http://deptinfo.cnam.fr/Enseignement/Memoires/LUSTEAU.Franck/Pages/Les_modulations_de_base.htm"
+ title="http://deptinfo.cnam.fr/Enseignement/Memoires/LUSTEAU.Franck/Pages/Les_modulations_de_base.htm">http://deptinfo.cnam.fr/Enseignement/Memoires/LUSTEAU.Franck/Pages/Les_modulations_de_base.htm</a>
+<br>
+<a title="http://www.ide.fr/images/swf/agon13_tnt.swf"
+ href="http://www.ide.fr/images/swf/agon13_tnt.swf">http://www.ide.fr/images/swf/agon13_tnt.swf</a>
+<br>
+<a
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s2/animation/a1_p01_telecom_s02.swf"
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s2/animation/a1_p01_telecom_s02.swf">http://rainet.enic.fr/unit/fondementstelecoms/s2/animation/a1_p01_telecom_s02.swf</a>
+<br>
+<a
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s4/animation/a1_p02_telecom_s04.swf"
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s4/animation/a1_p02_telecom_s04.swf">http://rainet.enic.fr/unit/fondementstelecoms/s4/animation/a1_p02_telecom_s04.swf</a>
+<br>
+<a
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s11/animation/a1_p07_telecom_s11.swf"
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s11/animation/a1_p07_telecom_s11.swf">http://rainet.enic.fr/unit/fondementstelecoms/s11/animation/a1_p07_telecom_s11.swf</a>
+<br>
+<a
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s11/animation/a1_p19_telecom_s11.swf"
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s11/animation/a1_p19_telecom_s11.swf">http://rainet.enic.fr/unit/fondementstelecoms/s11/animation/a1_p19_telecom_s11.swf</a>
+</small>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>Modulations
+de
+signaux continus</small></h2>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>amplitude
+AM</small></li>
+</ul>
+<small><a
+ href="http://www.univ-lemans.fr/enseignements/physique/02/electro/modula.html"
+ title="http://www.univ-lemans.fr/enseignements/physique/02/electro/modula.html">http://www.univ-lemans.fr/enseignements/physique/02/electro/modula.html</a><br>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>Bande
+Lat&eacute;rale
+Unique</small></li>
+</ul>
+<small><a href="http://fr.wikipedia.org/wiki/Bande_lat%C3%A9rale_unique"
+ title="http://fr.wikipedia.org/wiki/Bande_lat&eacute;rale_unique">http://fr.wikipedia.org/wiki/Bande_lat%C3%A9rale_unique</a><br>
+<a title="http://dept.navigation.enmm.free.fr/types_emission.swf"
+ href="http://dept.navigation.enmm.free.fr/types_emission.swf">http://dept.navigation.enmm.free.fr/types_emission.swf</a><br>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>fr&eacute;quence
+FM</small></li>
+</ul>
+<small><a
+ href="http://www.univ-lemans.fr/enseignements/physique/02/electro/modulfreq.html"
+ title="http://www.univ-lemans.fr/enseignements/physique/02/electro/modulfreq.html">http://www.univ-lemans.fr/enseignements/physique/02/electro/modulfreq.html</a>
+<br>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>St&eacute;r&eacute;o
+et RDS</small></li>
+</ul>
+<small><a href="http://fr.wikipedia.org/wiki/Radio_FM"
+ title="http://fr.wikipedia.org/wiki/Radio_FM">http://fr.wikipedia.org/wiki/Radio_FM</a>
+<br>
+<a
+ href="http://www.sonelec-musique.com/electronique_bases_diffusion_fm_mono_stereo.html"
+ title="http://www.sonelec-musique.com/electronique_bases_diffusion_fm_mono_stereo.html">http://www.sonelec-musique.com/electronique_bases_diffusion_fm_mono_stereo.html</a><br>
+<a
+ href="http://www.g.laroche.free.fr/francais/rds/generalites/Principe_rds.htm"
+ title="http://www.g.laroche.free.fr/francais/rds/generalites/Principe_rds.htm">http://www.g.laroche.free.fr/francais/rds/generalites/Principe_rds.htm</a><br>
+<a href="http://pagesperso-orange.fr/tvignaud/rds/fr-rds.htm"
+ title="http://pagesperso-orange.fr/tvignaud/rds/fr-rds.htm">http://pagesperso-orange.fr/tvignaud/rds/fr-rds.htm</a>
+<br>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>Largeur
+d&rsquo;impulsions PWM</small></li>
+</ul>
+<small><a
+ href="http://www.univ-lemans.fr/enseignements/physique/02/electro/modulpuls.html"
+ title="http://www.univ-lemans.fr/enseignements/physique/02/electro/modulpuls.html">http://www.univ-lemans.fr/enseignements/physique/02/electro/modulpuls.html</a>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>synth&egrave;se</small></li>
+</ul>
+<small><a
+ href="http://www.louis-armand.uha.fr/btsSE/acrobat-modules/am.pdf"
+ title="http://www.louis-armand.uha.fr/btsSE/acrobat-modules/am.pdf">http://www.louis-armand.uha.fr/btsSE/acrobat-modules/am.pdf</a><br>
+<br>
+</small>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>Modulations
+de
+signaux num&eacute;riques</small></h2>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>introduction</small></li>
+</ul>
+<small><a
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s5/animation/a1_p01_telecom_s05.swf"
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s5/animation/a1_p01_telecom_s05.swf">http://rainet.enic.fr/unit/fondementstelecoms/s5/animation/a1_p01_telecom_s05.swf</a><br>
+<a
+ title="http://uuu.enseirb-matmeca.fr/~kadionik/formation/tx_num/tx_num.html"
+ href="http://uuu.enseirb-matmeca.fr/%7Ekadionik/formation/tx_num/tx_num.html">http://uuu.enseirb-matmeca.fr/~kadionik/formation/tx_num/tx_num.html</a>
+<br>
+<a
+ title="http://www.mathworks.com/matlabcentral/fileexchange/14410-ask-ook-fsk-bpsk-qpsk-8psk-modulations"
+ href="http://www.mathworks.com/matlabcentral/fileexchange/14410-ask-ook-fsk-bpsk-qpsk-8psk-modulations">http://www.mathworks.com/matlabcentral/fileexchange/14410-ask-ook-fsk-bpsk-qpsk-8psk-modulations</a><br>
+<a
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s5/p08_telecom_s5.htm"
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s5/p08_telecom_s5.htm">http://rainet.enic.fr/unit/fondementstelecoms/s5/p08_telecom_s5.htm</a><br>
+<a href="http://sitelec.org/cours/abati/flash/codage.swf">http://sitelec.org/cours/abati/flash/codage.swf</a>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>ASK</small></li>
+</ul>
+<small><a href="http://en.wikipedia.org/wiki/Amplitude-shift_keying"
+ title="http://en.wikipedia.org/wiki/Amplitude-shift_keying">http://en.wikipedia.org/wiki/Amplitude-shift_keying</a>
+<br>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>FSK</small></li>
+</ul>
+<small><a
+ href="http://uuu.enseirb.fr/%7Edondon/transnum/modnumFSK/ModnumFSK.html"
+ title="http://uuu.enseirb.fr/~dondon/transnum/modnumFSK/ModnumFSK.html">http://uuu.enseirb.fr/~dondon/transnum/modnumFSK/ModnumFSK.html</a>
+<br>
+<a
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s5/p09_telecom_s5.htm"
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s5/p09_telecom_s5.htm">http://rainet.enic.fr/unit/fondementstelecoms/s5/p09_telecom_s5.htm</a>
+<br>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>PSK</small></li>
+</ul>
+<small><a
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s5/p10_telecom_s5.htm"
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s5/p10_telecom_s5.htm">http://rainet.enic.fr/unit/fondementstelecoms/s5/p10_telecom_s5.htm</a>
+<br>
+</small>
+<ul>
+  <li style="position: relative; top: 0px; height: 0px;"><small>codage</small></li>
+</ul>
+<small><a href="http://sitelec.free.fr/cours/abati/flash/codage.swf"
+ title="http://sitelec.free.fr/cours/abati/flash/codage.swf">http://sitelec.free.fr/cours/abati/flash/codage.swf</a>
+<br>
+<a
+ title="http://rainet.enic.fr/unit/fondementstelecoms/s5/p02_telecom_s5.htm"
+ href="http://rainet.enic.fr/unit/fondementstelecoms/s5/p02_telecom_s5.htm">http://rainet.enic.fr/unit/fondementstelecoms/s5/p02_telecom_s5.htm#</a>
+<br>
+<br>
+</small>
+<h2 style="position: relative; top: 0px; height: 0px;"><small>Analyseur
+de spectre</small></h2>
+<small><a
+ title="http://www.louis-armand-mulhouse.eu/btsse/acrobat-cours/spectre.pdf"
+ href="http://www.louis-armand-mulhouse.eu/btsse/acrobat-cours/spectre.pdf">http://www.louis-armand-mulhouse.eu/btsse/acrobat-cours/spectre.pdf</a>
+<br>
+<br>
+</small>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Bibliography</title>
+
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);" alink="#000088" link="#0000ff" vlink="#ff0000">
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr align="center">
+<td style="vertical-align: top;"><span style="font-weight: bold;">Copyright</span><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+<h1><font color="#000000" face="Times New Roman, Times, serif" size="2">Readers
+should be aware of some of the issues raised
+by the electronic dissemination of published papers. In particular,
+readers should know that: </font><br>
+<font color="#000000" face="Times New Roman, Times, serif" size="2"><em>The
+documents contained in these directories are
+included by the contributing authors as a means to ensure timely
+dissemination of scholarly and technical work on a non-commercial
+basis. Copyright and all rights therein are maintained by the authors
+and by other copyright holders, notwithstanding that they have offered
+their works here electronically. It is understood that all persons
+copying this information will adhere to the terms and constraints
+invoked by each author's copyright. These works may not be reposted
+without the explicit permission of the copyright holder.</em></font></h1>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<!------------------------------------------------------------------------->
+<h1><small>Publications</small></h1>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">Homography
+from a Vanishing Point in Urban Scenes</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">
+IEEE RSJ/International conference on Intelligent Robot and System
+(IROS'03)</span><br>
+<small>
+<span style="font-style: italic;">Abstract:</span>
+In this paper, we address the problem
+of&nbsp; computing the ego-motion of a
+vehicle in an urban environment using dynamic vision. We assume a
+planar piecewise world where the planes are mainly distributed along
+three principal directions corresponding to the axes of a reference
+frame linked to the ground plane with a vertical z-axis. We aim to
+estimate both the motion of the car and the principal planes in the
+scene corresponding to the road and the frontages of the building from
+a sequence of images provided by an on-board uncalibrated camera. In
+this paper, we present preliminary results concerning the robust
+segmentation of the road using projective properties of the scene. We
+develop a two-stage algorithm in order to increase robustness. The
+first stage detects the borders of the road using a contour-based
+approach and primarily allows us to estimate the Dominant Vanishing
+Point (DVP). The DVP and the borders of the road are then used to
+constrain the region where the points of interest, corresponding to the
+road lane markers, can be extracted. The second stage uses a robust
+technique based on projective invariant to match the lines and points
+between two consecutive images in the sequence. Finally, we compute the
+homography relating the points and lines lying on the road into the two
+images.<br>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="https://hal.inria.fr/inria-00001038">document</a>
+(<small>700 kb</small>),&nbsp;<a href="Articles/IROS03/iros03_talk_nsimond.pdf">presentation</a>
+(<small>3.5 Mb</small>), <a href="Annexes/iros03_nsimond.bib"><img style="border: 0px solid ; width: 20px; height: 20px;" alt="iros03_bibtex" src="Images/bibtex.gif" align="middle"></a></small><br>
+<br>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">Détection
+robuste du plan de la route en milieu urbain</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">Congrès
+Francophone de Reconnaissance de Formes et Intelligence Artificielle
+(RFIA'04)</span><br>
+<small>
+<span style="font-style: italic;">Résumé : </span>
+Cet article décrit un algorithme de segmentation du plan de la
+route dans des images de scènes urbaines. Nous supposons que
+l'environnement contient une majorité de contours alignés
+selon les 3 directions principales. L'algorithme se décompose en
+deux étapes. La première détecte conjointement les
+lignes de fuite qui convergent vers le point de fuite dominant. Les
+lignes de fuite sont issues d'une détection de contours à
+laquelle nous appliquons des contraintes spécifiques aux
+scènes urbaines. Nous recherchons alors des points
+d'intérêts dans la région de l'image
+délimitée par les lignes de fuite coplanaires. Lors de la
+deuxième étape, nous mettons en correspondance l'ensemble
+des caractéristiques détectées (points
+d'intérêts et lignes de fuite) en utilisant les
+propriétés d'invariance projective entre deux prises de
+vues d'une même scène de façon
+à estimer l'homographie induite par le plan de la route.<br>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="http://hal.inria.fr/inria-00001044">document</a>
+(<small>3,4 Mb</small>),&nbsp;<a href="Articles/RFIA04/rfia04_nsimond_talk.pdf">presentation</a>
+(<small>3.5 Mb</small>), <a href="Articles/RFIA04/rfia04_nsimond.bib"><img style="border: 0px solid ; width: 20px; height: 20px;" alt="iros03_bibtex" src="Images/bibtex.gif" align="middle"></a></small><br>
+<br>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">Trajectography
+of an Uncalibrated Stereo Rig in Urban Environments</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">IEEE
+RSJ/International conference on Intelligent Robot and System
+(IROS'04)</span><br>
+<small>
+<span style="font-style: italic;">Abstract: </span>
+This paper describes an original method to
+compute the relative motion
+of an uncalibrated stereo rig in urban environments from features lying
+on the road. The extraction of significant reliable features on the
+road remains the critical step of this method. We nevertheless detect
+them according to the stereo constraints and an a priori knowledge on
+the scene. The motion between two frames of the stereo rig is
+considered as rigid: the homography computation is enforced by the
+redundancy of the feature locations in multiple views. The method has
+been tested on video sequences recorded from a test vehicle that was
+driven in an urban environments. Promising results from these
+experiments will be presented.<br>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="https://hal.inria.fr/inria-00001045">document</a>
+(<small>404 kb</small>), <a href="Articles/IROS04/iros04_talk_nsimond.pdf">presentation</a>
+(<small>1.4 Mb</small>), <a href="Annexes/rfia04_nsimond.bib"><img style="border: 0px solid ; width: 20px; height: 20px;" alt="iros04_bibtex" src="Images/bibtex.gif" align="middle"></a></small><br>
+<br>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">Localisation
+robuste d'un véhicule en environnement urbain à
+partir d'un système de stéréo-vision</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">PhD
+thesis prepared in the ICARE project-team, INRIA Sophia-Antipolis, july
+2005</span><br>
+<small>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="http://tel.ccsd.cnrs.fr/documents/archives0/00/00/96/94/index_fr.html">document</a>
+(<small>20.7 Mb</small>), <a href="Articles/These/these_presentation_nsimond.pdf">presentation</a>
+(<small>6.9 Mb</small>), <a href="Annexes/these_nsimond.bib"><img style="border: 0px solid ; width: 20px; height: 20px;" alt="iros03_bibtex" src="Images/bibtex.gif" align="middle"></a></small><br>
+<br>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">Reconstruction
+of the road plane with an embedded stereo-rig in urban environments</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">IEEE
+Intelligent Vehicles Symposium (IV'06)</span><br>
+<small>
+<span style="font-weight: bold; font-style: italic;">Award
+of the best interactive session paper</span><br>
+<span style="font-style: italic;">Abstract: </span>
+We present in this article an original method to reconstruct the road
+in the specific context of urban environment thanks to the data
+provided by an uncalibrated stereo-vision system. The method consists
+on extracting then tracking features (points, lines) from the road and
+estimate the homography induced by the plane between two poses. The
+purposed method copes with the dense traffic conditions: the free space
+required (first ten meters in front of the vehicle) is slightly
+equivalent to the&nbsp; security distance between two vehicles.
+Experimental issues from real data are presented and discussed.<br>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="https://hal.inria.fr/inria-00091220">document</a>
+(<small>1.4 Mb</small>), <a href="Articles/IV06/iv06_poster_nsimond.pdf">poster</a>
+(<small>2.4 Mb</small>), <a href="Annexes/iv06_nsimond.bib"><img style="border: 0px solid ; width: 20px; height: 20px;" alt="iv06_bibtex" src="Images/bibtex.gif" align="middle"></a></small><br>
+<br>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">Vehicle
+Trajectory from an Uncalibrated Stereo-Rig with
+Super-Homography</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">IEEE
+RSJ/International conference on Intelligent Robot and System
+(IROS'06)</span><br>
+<small>
+<span style="font-style: italic;">Abstract: </span>
+A vision-based method to estimate the
+vehicle displacement in urban environments is decribed when no GPS data
+are available. The method consists on tracking coplanar features of the
+static environment to estimate the homography induced by the tracked
+plane between two views. The road is the common link between all the
+urban scenes therefore we mainly focus on it to develop the method.
+When cameras have large fields of view, the method can be used to track
+other planes like those extracted from the frontages. The method can be
+assumed as a reliable visual odometer when no data from GPS system are
+available and is particularly well-adapted to the urban traffic: the
+homography computation requires only a few meters of free space in
+front of the vehicle.<br>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="https://hal.inria.fr/inria-00091212">document</a>
+(<small>872 kb</small>), <a href="Articles/IROS06/iros06_talk_nsimond.pdf">presentation</a>
+(<small>12.4 Mb</small>), <a href="Annexes/iros06_nsimond.bib"><img style="border: 0px solid ; width: 20px; height: 20px;" alt="iros06_bibtex" src="Images/bibtex.gif" align="middle"></a></small><br>
+<br>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">Obstacle
+Detection from IPM
+and Super-Homography</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">IEEE
+RSJ/International conference on Intelligent Robot and System
+(IROS'07)</span><br>
+<small>
+<span style="font-style: italic;">Abstract: </span>
+We present in this article a simple method toestimate
+an IPM view from an embedded camera. The method is based on the
+tracking of the road markers assuming that the road is locally planar.
+Our aim is the development of a free-space estimator which can be
+implemented in an Autonomous Guided Vehicle to allow a safe path
+planning. Opposite to most of the obstacle detection methods which make
+assumptions on the shape or height of the obstacles, all the scene
+elements above the road plane (particularly kerbs and poles) have to be
+detected as obstacles. Combined with the IPM tranformation, this
+obstacle detection stage can be viewed as the first stage of a
+free-space estimator dedicated to AGV in the complex urban
+environments.<br>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="http://hal.inria.fr/inria-00141922">document</a>
+(<small>1.1 Mb</small>), <a href="Articles/IROS07/iros07_presentation_nsimond.pdf">presentation</a>
+(8<small> Mb</small>), <a href="Annexes/iros07_nsimond.bib"><img style="border: 0px solid ; width: 20px; height: 20px;" alt="iros07_bibtex" src="Images/bibtex.gif" align="middle"></a></small><br>
+<br>
+<!------------------------------------------------------------------------->
+<h1><small>Talk</small></h1>
+<!------------------------------------------------------------------------->
+<span style="color: rgb(51, 51, 153); font-weight: bold;">What
+Can Be Done with an
+Embedded Stereo-Rig in Urban Environments ?</span><br>
+<span style="font-style: italic; color: rgb(51, 102, 255);">School
+of Electrical and Electronic Engineering, Nanyang Technological
+University, Singapore, 20th june 2006</span><br>
+<small>
+<img style="border: 0px solid ; width: 24px; height: 24px;" alt="" src="Images/reader_90x90.jpg" align="middle"><a href="http://hal.inria.fr/index.php?halsid=d2e2f14c6cc1062eb314a561e3121eec&amp;view_this_doc=inria-00091212&amp;version=1">presentation</a>
+(<small>14.7 Mb</small>)<br>
+</small>
+</body></html>

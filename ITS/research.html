@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Research</title>
+</head>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);" alink="#000088" link="#0000ff" vlink="#ff0000">
+<h1><small>Animations</small></h1>
+
+<table style="text-align: left; width: 760px; height: 241px;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td style="vertical-align: top; text-align: center;"><a href="Videos/port_dvp.mpg"><img alt="" src="Images/gnome-video-mpeg2.png" style="border: 0px solid ; width: 48px; height: 52px;"></a><br>
+
+      <small>37 Mb </small><a href="Videos/rn98_dvp.mpg"><img alt="" src="Images/gnome-video-mpeg2.png" style="border: 0px solid ; width: 48px; height: 52px;"></a><br>
+
+      <small>11 Mb</small><br>
+
+      </td>
+
+      <td style="vertical-align: top;">The two first
+animations present
+the
+tracking of the Dominant Vanishing
+Point (DVP) in the specific context of urban scenes. I assume (like all
+authors) that the urban scene contains sets of parallel lines oriented
+along the three main directions. The algorithm focuses on the DVP which
+is
+the projection in the images of the intersection of 3D parallel lines
+on
+the plane at infinity. Among the subset of edge-lines converging to
+the DVP, only those which are detected on the road verify the
+homography induced by the road plane. Considering the global
+assumptions, we can then segment the road area in the image in <big><span style="color: rgb(0, 204, 204);">cyan</span> </big>with
+the 2 extreme painted lanes which are focus with <big><span style="color: rgb(0, 153, 0);">dark green</span></big>.
+      <br>
+
+At the bottom,&nbsp; you can see the
+timing diagram of the DVP
+coordinates in left <big style="color: rgb(255, 0, 0);">red</big>
+and
+right <big style="color: rgb(102, 255, 153);">green</big><span style="color: rgb(102, 255, 153);"> </span>images.
+Two Kalman filters
+are used to obtain a prediction of the location of the DVPs and the
+painted
+lanes and to smooth the variations of the estimations.<br>
+
+      <br>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td style="vertical-align: top; text-align: center;"><a href="Videos/descente.mpg"><img alt="" src="Images/gnome-video-mpeg2.png" style="border: 0px solid ; width: 48px; height: 52px;"></a><br>
+
+      <small>14 Mb</small></td>
+
+      <td style="vertical-align: top;">The third animation
+shows the
+same video-sequence with the matching of
+coplanar feature points detected in the couple of stereo images.<br>
+
+      <span style="font-weight: bold; font-style: italic;">At
+the top</span>,
+the
+feature points are discriminated with their contribution to the
+Super-Homography estimation :
+      <ul>
+
+        <li><big><span style="color: rgb(51, 255, 51);">green</span>
+          </big>:
+verify all the Super-Homography constraints,</li>
+
+        <li><big><span style="color: rgb(255, 204, 0);">orange</span>
+          </big>:
+one projection of the feature point is missing in
+one view of the current images,</li>
+
+        <li><big style="color: rgb(255, 0, 0);">red</big><span style="color: rgb(255, 0, 0);"> </span>: the both
+projections of the
+feature point are missing
+in the views of the current images,</li>
+
+        <li><big style="color: rgb(255, 153, 255);">pink</big><span style="color: rgb(255, 153, 255);"> </span>: do not
+verify all the
+Super-Homography constraints,</li>
+
+        <li><big style="color: rgb(255, 255, 0);">yellow</big><span style="color: rgb(255, 255, 102);"> <span style="color: rgb(51, 0, 51);">:</span></span><span style="color: rgb(51, 0, 51);"> </span>only verify
+the homography
+between the current
+stereo views.</li>
+
+      </ul>
+
+      <div style="text-align: center;"><a href="Images/180841_0896.png"><img alt="" src="Images/180841_0896.png" style="border: 0px solid ; width: 678px; height: 508px;"></a> </div>
+
+      <span style="font-style: italic; font-weight: bold;">At
+the
+bottom</span>, the decomposition of the stereo-rig geometry
+assuming
+generic
+matrix of intrinsic parameters for the both cameras and a z-ordinate
+fixed at 1.2m. Dashed line between the 2 camera means that the relative
+pose of the right camera in the left camera framework, computed from
+the stereo homography, is fixed with nominal value. The white vector
+represents the vertical normal of plane which induces homographies.<br>
+
+      <span style="font-style: italic; font-weight: bold;">On
+the right</span>,
+a 2D trajectography of the left camera is computed,
+assuming the integration of the estimated motion between two
+consecutive views.<br>
+
+      <br>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td style="vertical-align: top; text-align: center;"><a href="Videos/canyon.mpg"><img alt="" src="Images/gnome-video-mpeg2.png" style="border: 0px solid ; width: 48px; height: 52px;"></a><br>
+
+      <small>13 Mb</small></td>
+
+      <td style="vertical-align: top;">The methodology is
+particularly weel-adapted to the typical configuration of urban
+environments where the
+localization with GPS is impossible due to the vertical planes which
+limit the clear view of the horizon. The images are segmented in 3
+parts : the road plane in <big style="color: rgb(0, 204, 204);">cyan</big>
+and 2 others in <big style="background-color: rgb(204, 204, 204); color: rgb(255, 255, 204);">light
+yellow</big> assumed as
+vertical planes. A super-homography is computed on each region: the
+regions in <big style="color: rgb(153, 0, 0);">brown</big>
+represent
+parts of the scene where the feature points
+are not coplanar, they contain obstacles. I have now to merge the
+estimations of the stereo-rig induced by each plane to improve the
+robustness of the method and make easy the 2.5D reconstruction of the
+environment.<br>
+
+      <br>
+
+      <div style="text-align: center;"><a href="Images/canyon_0305.png"><img alt="" src="Images/canyon_0305.png" style="border: 0px solid ; width: 686px; height: 260px;"></a>
+      </div>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td style="vertical-align: top; text-align: center;"><a href="Videos/ipm.avi"><img style="border: 0px solid ; width: 48px; height: 52px;" alt="" src="Images/divx.jpg"></a><br>
+
+      <small>15.9 Mb</small><br>
+
+      <a href="Videos/RD198.avi"><img style="border: 0px solid ; width: 48px; height: 52px;" alt="" src="Images/divx.jpg"></a><br>
+
+      <small>33.9 Mb</small> </td>
+
+      <td>The Inverse Perspective Mapping (IPM) transformation
+can be
+computed from two parallel lines which are lying on the same plane.
+Thanks to the tracking of the DVP, computed with the <big style="color: rgb(0, 204, 204);">cyan </big>road
+markers, the IPM transformation can&nbsp;be viewed as a homography,
+where the four <big><span style="color: rgb(255, 0, 0);">red</span>
+      </big>points,
+which represent the <big><span style="color: rgb(51, 255, 51);">green</span> </big>
+foreground of the road plane, will form a
+parallelogram in the bird-eye view.&nbsp;While the camera
+calibration
+is unknown, the warped image is dependant of two scale factors along
+the u-axis and v-axis. In the animations, we suppose that the road has
+a
+constant width, the lateral position and the orientation of the camera
+can also be estimated with a novel scale-factor uncertainty.<br>
+
+      <br>
+
+      <a href="Images/ipm0920.png"><img alt="" src="Images/ipm0920.png" style="border: 0px solid ; width: 686px; height: 260px;"></a><br>
+
+      <br>
+
+      <a href="Images/ipm0668.png"><img alt="" src="Images/ipm0668.png" style="border: 0px solid ; width: 686px; height: 260px;"></a><br>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td style="vertical-align: top;"><a href="Videos/obstacle.avi"><img style="border: 0px solid ; width: 48px; height: 52px;" alt="" src="Images/divx.jpg"></a><br>
+
+      <div style="text-align: center;"><small>19 Mb</small></div>
+
+      </td>
+
+      <td>Thanks to the reliability and the precision&nbsp;of
+the
+homography computed with the Super-Homography, an obstacle detection
+task can be processed. We also consider the homography between the left
+and right image, induced by the road plane. Only the features which are
+lying on the plane are correctly reprojected in the other image,
+according to correlation and spatial criteria. We hence discriminate
+the <big><span style="color: rgb(51, 255, 51);">green</span>
+      </big>coplanar edges from the <big><span style="color: rgb(255, 0, 0);">red </span></big>other
+which represent obstacles. On the right, the IPM view allows a polar
+map of the free-space in front of the vehicle.<br>
+
+      <br>
+
+      <a href="Images/obs0998.png"><img alt="" src="Images/obs0998.png" style="border: 0px solid ; width: 686px; height: 260px;"></a></td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+<h1><small>Reconstruction of the road plane</small></h1>
+
+<table style="text-align: left; width: 760px; height: 107px;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td style="vertical-align: top;">One of the
+application of the
+localization of the vehicle with the purposed method is the
+reconstruction of the road plane. The right image show a bird-eye view
+of the road followed by the test-vehicle during a sequence recorded in
+a sloppy street, near the Castel of Versailles. The compound image is
+made of the superimposure of 312 images of the right camera, joint by
+the estimated homography, induced by the road plane.<br>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<span style="font-weight: bold;"></span>
+<table style="text-align: left; width: 763px; height: 636px;" cellpadding="1" cellspacing="1">
+
+  <tbody>
+
+    <tr>
+
+      <td style="vertical-align: top;">
+      <table style="text-align: left; margin-left: auto; margin-right: auto; height: 619px; width: 273px;" border="0" cellpadding="1" cellspacing="1">
+
+        <tbody>
+
+          <tr>
+
+            <td>In the middle, some samples of
+the images used to create the bird-eye
+viewed image. The field of view is clear along the sequence (&lt;
+400 m). The trajectography of the vehicle is a straighted motion during
+abroad 300 m with a change of lane&nbsp;at the end.<br>
+
+            <br>
+
+The default of reconstruction at the end of the sequence is mainly due
+to
+the lack of feature points extracted in the single lane observed during
+the change
+of lane. A car actually obstructs the right lane and the road markers
+are solid: very few corners are extracted.<br>
+
+            <br>
+
+The non-straighed shape of the road on the left and right side of the
+hybrid
+image is certainly due to the images are not rectified. </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td><a href="Images/versailles_descente.jpg"><img style="border: 0px solid ; width: 184px; height: 140px;" alt="" src="Images/versailles_descente.jpg" align="middle"></a></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+      <td style="vertical-align: top;">
+      <table style="text-align: left; width: 177px; height: 612px;" border="1" cellpadding="2" cellspacing="2">
+
+        <tbody>
+
+          <tr>
+
+            <td style="text-align: center; vertical-align: middle;"><img alt="" src="Images/descente_D0330.png" style="width: 186px; height: 140px;"><br>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="text-align: center; vertical-align: middle;"><img alt="" src="Images/descente_D0415.png" style="width: 186px; height: 127px;" align="middle"><br>
+
+            </td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td style="text-align: center; vertical-align: middle;"><img alt="" src="Images/descente_D0480.png" style="width: 189px; height: 141px;" align="middle"><br>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td style="text-align: center; vertical-align: middle;"><img alt="" src="Images/descente_D0500.png" style="width: 187px; height: 140px;"></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+      <td style="vertical-align: top;"><a href="Images/descente_260-570_vert.png"><img alt="" src="Images/descente_260-570_vert.png" style="border: 0px solid ; width: 258px; height: 611px;" align="middle"></a><br>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+All the videos sequences have been recorded thanks to the experimental
+vehicles of the <a href="http://www.lara.prd.fr/en/">IMARA</a>
+and the <a href="http://www.inrets.fr/ur/livic/">LIVIC</a>
+laboratories. <br>
+
+<br>
+
+<span style="color: rgb(255, 255, 255);"></span>
+</body>
+</html>
